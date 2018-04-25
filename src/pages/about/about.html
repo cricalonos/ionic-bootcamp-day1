@@ -1,11 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <ion-searchbar (ionInput)="getPublications($event)"></ion-searchbar>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-row *ngFor="let publication of publications">
+    <ion-col>
+      <ion-img width="99" height="99" [src]="publication.picture"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img width="99" height="99" [src]="publication.picture"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img width="99" height="99" [src]="publication.picture"></ion-img>
+    </ion-col>
+  </ion-row>
 </ion-content>
